@@ -36,3 +36,7 @@ model_pipeline.fit(X_train, y_train)
 # Step 7: Save the pipeline (includes both encoder and model)
 with open('model_pipeline.pkl', 'wb') as f:
     pickle.dump(model_pipeline, f)
+
+with open("model_pipeline.pkl", "rb") as f:
+    f.seek(0)   
+    model_pipeline = pickle.load(f)
